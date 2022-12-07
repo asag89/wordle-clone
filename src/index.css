@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: auto;
+  margin: 10px auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  width: 335px;
+  font-size: 2.6em;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* grid ******************************************************** */
+.grid-container {
+  width: auto;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.row-item {
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  border-radius: 10px;
+  margin: 6px;
+}
+
+.filled {
+  background-color: transparent;
+}
+
+.green {
+  background-color: rgb(22, 223, 22) !important;
+}
+
+.grey {
+  background-color: rgb(142, 138, 138) !important;
+}
+
+.yellow {
+  background-color: rgb(187, 187, 28) !important;
+}
+
+.error-msg {
+  margin-top: 20px;
+  color: #fff;
+  padding: 10px 25px;
+  text-align: center;
+  background-color: rgba(238, 19, 19, 1);
+  border-radius: 10px;
+}
+
+/* keypad ********************************************* */
+.keypad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.keypad .keypad-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.keypad-key {
+  padding: 18px 16px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: rgb(142, 138, 138);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.keypad-key:hover {
+  background-color: rgb(122, 119, 119);
+  transform: scale(1.1);
+}
+
+/* modal ********************************************* */
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #111827;
+  color: #fff;
+  border-radius: 10px;
+  width: 420px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 28px 5px #fff;
+  box-shadow: 0px 0px 28px 5px #fff;
+  color: #fff;
+}
+
+.modal-msg {
+  font-weight: 600;
+}
+
+.modal-solution {
+  color: rgb(226, 20, 233);
+  font-weight: 600;
+  font-size: 2em;
+  padding: 20px 0;
+}
+
+.modal-turn-msg {
+  font-weight: 500;
+  font-size: 1em;
+  padding-bottom: 20px;
+}
+
+.reset-btn {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px;
+  background-color: rgb(25, 95, 207);
+  font-weight: 700;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* media queries ********************************************* */
+@media(max-width: 560px) {
+  .container {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .grid-container {
+    margin-top: 5px;
+  }
+
+  .row-item {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    font-size: 1.4em;
+  }
+
+  .error-msg {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: .8em;
+  }
+
+  .keypad {
+    margin-top: 10px;
+  }
+
+  .keypad-key {
+    padding: 0;
+    width: 28px;
+    height: 52px;
+    border-radius: 3px;
+    font-size: .8em;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wide-key {
+    width: auto !important;
+    padding: 0 3px !important;
+  }
+
+  .modal {
+    width: 90%;
+  }
+}
